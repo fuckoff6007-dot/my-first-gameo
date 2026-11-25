@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Dice Game</title>
+<style>
+body {
+  background: #111827;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  padding: 30px 10px;
+}
+.game {
+  background: #263449;
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+#dice {
+  font-size: 110px;
+  margin: 25px;
+}
+button {
+  background: #00c896;
+  color: black;
+  border: 0;
+  padding: 16px 30px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="game">
+<h1>🎮 My First Game</h1>
+<h2>Dice Game</h2>
+<div id="dice">🎲</div>
+<h3 id="result">पासा फेंको!</h3>
+<button onclick="rollDice()">ROLL DICE</button>
+</div>
+<script>
+function rollDice() {
+ let n = Math.floor(Math.random()*6)+1;
+ let faces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+ document.getElementById("dice").innerText = faces[n-1];
+ document.getElementById("result").innerText = "आपका नंबर: "+n;
+}
+</script>
+</body>
+</html>
